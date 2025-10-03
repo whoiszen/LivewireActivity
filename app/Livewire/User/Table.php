@@ -9,13 +9,15 @@ class Table extends Component
 {
     public $users;
 
-    public function mount()
-    {
-        $this->users = User::limit(20)->get();
-    }
+    // public function mount()
+    // {
+    //     $this->users = User::limit(20)->get();
+    // }
 
     public function render()
     {
-        return view('livewire.user.table');
+        return view('livewire.users.table', [
+            'users'=>User::limit(20)->get()
+        ]);
     }
 }

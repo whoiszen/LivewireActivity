@@ -13,12 +13,7 @@
 
         <tbody>
             @foreach ($users as $user )
-            <tr>
-                 <td class="border px-2 py-2">{{ $user->id }}</td>
-                <td class="border px-2 py-2">{{ $user->name }}</td>
-                <td class="border px-2 py-2">{{ $user->email }}</td>
-                <td class="border px-2 py-2">{{ $user->password }}</td>
-                <td class="border px-2 py-2">{{ $user->email_verified_at }}</td>
+            <livewire:users.table-row :user="$users"/>
             @endforeach
         </tbody>
 </div>

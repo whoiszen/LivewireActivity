@@ -5,12 +5,14 @@ use App\Livewire\Settings\Password;
 use App\Livewire\Settings\Profile;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\User\Table as Tables;
-
+use App\Livewire\Post\Table as PostTable;
 // Route::get('/', function () {
 //     return view('welcome');
 // })->name('home');
 
+
 Route::get('/table', Tables::class)->name('users.index');
+Route::get('/post', PostTable::class)->name('post.index');
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
